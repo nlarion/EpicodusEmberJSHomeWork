@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  sortBy: ['costLasc'],
+  sortedRentals: Ember.computed.sort('city.rentals', 'sortBy'),
   isImageShowing: false,
- actions: {
+  actions: {
     imageShow: function() {
       this.set('isImageShowing', true);
     },

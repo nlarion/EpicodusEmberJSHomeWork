@@ -1,1 +1,8 @@
-{{outlet}}
+<h2>More information about {{model.owner}}'s {{model.type}}</h2>
+
+{{rental-details update="update" rental=model destroyRental="destroyRental"}}
+
+{{update-rental rental=model update="update"}}
+
+<br>
+{{#link-to 'index'}}Home{{/link-to}}

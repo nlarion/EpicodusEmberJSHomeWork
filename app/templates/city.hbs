@@ -1,11 +1,13 @@
 <h4>Location: {{fullLocation}}</h4>
 
-<h3>Rentals available in {{city.name}}:</h3>
+<h3>Rentals available in {{model.name}}:</h3>
 
 <ul>
-  {{#each city.rentals as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
 </ul>
 
-<button {{action 'delete' city}}>Delete City</button>
+<button {{action 'destroyCity' model}}>Delete City</button>
+
+{{new-rental save2="save3" city=model}}
