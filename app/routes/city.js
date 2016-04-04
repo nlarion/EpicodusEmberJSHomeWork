@@ -15,6 +15,7 @@ export default Ember.Route.extend({
       this.transitionTo('city', params.city);
     },
     destroyCity(city) {
+      console.log("got this far");
       var rental_deletions = city.get('rentals').map(function(rental) {
         return rental.destroyRecord();
       });
